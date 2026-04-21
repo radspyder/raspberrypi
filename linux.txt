@@ -1,1 +1,66 @@
-My Linux Notes
+Linux Notes
+
+#### Connecting to Linux Computer (Raspberry Pi) ####
+
+ssh (Secure Shell)
+  ssh is used to connect to a Linux computer. On your Windows Computer you can open Powershell to use SSH. The format of the command is: ssh <username>@<ipaddress>
+    Example: ssh zackpi@192.168.100.152
+
+#### Working with Directories ####
+
+pwd (Print Working Directory)
+  pwd is used to see the current directory path that you are in. The format of the command is: pwd
+    Example: pwd
+
+cd (Change Directory)
+  cd is used to change your current directory. There are a few formats for this command. 
+    To drop down 1 directory from current directory path use: cd ..
+      Example: cd ..
+    To change directory to a directory that exists in your current working directory use: cd <directoryname>
+      Example: cd projects
+    To change directory to a directory in a different directory without using cd to get there use: cd <directorynamewithfullpath>
+      Example: cd /home/zackpi/projects
+
+mkdir (Make Directory)
+  mkdir is used to create a new directory in your current working directory. The format of this command is: mkdir <newdirectoryname>
+    Example: mkdir rocket
+
+ls (List)
+  ls is used to list the contents of the current directory. There are multiplle formats for this command.
+    To view a basic list of non-hidden files and directories in your current working directory use: ls
+      Example: ls
+    To view all files as well as their permissions and attributes use: ls -al
+      Example: ls -al
+
+#### Working with Files ####
+
+cat (Concatenate)
+  cat is used to print the contents of a file in your working directory. The format of the command is: cat <filename>
+    Example: cat rocket.py
+
+cp (Copy)
+  cp is used to make a copy of an existing file. The format of the command is: cp <existingfilename> <newfilename>
+    Example: cp rocket.py backup.py
+    Example 2: cp /home/zackpi/rocket.py /home/zackpi/projects/rocket.py
+
+mv (Move)
+  mv is used to move an existing file. The format is exactly the same as cp but the original file is removed: mv <existingfilename> <newfilename>
+    Example: mv rocket.py backup.py
+    Example 2: mv /home/zackpi/rocket.py /home/zackpi/projects/rocket.py
+
+chmod (Change Mode)
+  chmod is used to change permissions or attributes of a file. Primary reason is make a file executable. To see the attributes of the file you will use ls -al. If the file has x's it should executable.
+    To make a file executable use the format: chmod 755 <filename>
+      Example: chmod 755 rocket.py
+    To make a file not-executable use the format: chmod 644 <filename>
+      Example: chmod 644 rocket.py
+
+nano (Text Editor)
+  nano is a Linux text editor. When changes are done, press ctrl-x to exit, y to save or n to not save, then enter to confirm. The format is: nano <filename>
+    Example: nano camera.py
+
+python (python)
+  python command is used to run python files that end in .py and have python code in them. The files must be executable. The format is: python <filename.py>
+    Example: python rocket.py
+
+
