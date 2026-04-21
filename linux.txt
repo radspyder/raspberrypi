@@ -48,6 +48,14 @@ mv (Move)
     Example: mv rocket.py backup.py
     Example 2: mv /home/zackpi/rocket.py /home/zackpi/projects/rocket.py
 
+rm (Remove)
+  rm is used to delete a file or directory. There are 2 formats based on need.
+    To remove a single file in current working directory use: rm <filename>
+      Example: rm rocket.py
+    To remove a directory and all of its contents use: rm -rf <directory>      !!BE CAREFUL WITH RM -RF!!
+      Example: rm -rf projects
+      Example 2: rm -rf /home/zackpi/projects
+
 chmod (Change Mode)
   chmod is used to change permissions or attributes of a file. Primary reason is make a file executable. To see the attributes of the file you will use ls -al. If the file has x's it should executable.
     To make a file executable use the format: chmod 755 <filename>
